@@ -87,7 +87,10 @@ MyISAM存储的数据有三个文件分别是：.frm表结构文件，.MYD数据
 MyISAM主键索引查找流程：先通过.MYI文件找到对应索引的文件指针，再根据文件指针去.MYD文件中定位对应的数据记录。
 MyISAM普通索引查找流程：和主键索引查找流程一致。
 
-![]()
+![](https://github.com/XXXLRC/Data-SQL/blob/44504a4a6c2dadd0a73fa299d7c05381449b7664/images/2021110900001.png)
+![](https://github.com/XXXLRC/Data-SQL/blob/44504a4a6c2dadd0a73fa299d7c05381449b7664/images/202111090000002.png)
+
+
 
 InnoDB存储的数据有两个文件：.frm是表结构文件，.ibd是数据和索引文件（InnoDB Data）
 特点：
@@ -100,3 +103,5 @@ InnoDB存储的数据有两个文件：.frm是表结构文件，.ibd是数据和
 查找：
 InnoDB主键索引查找流程：通过.ibd文件找到对应的索引，索引的value即为那行对应的完整数据。
 InnoDB普通索引查找流程：通过.ibd文件找到对应的索引，索引的value即为那行对应的主键的值，再根据主键值去主键索引树中找到对应的行数据。
+![](https://github.com/XXXLRC/Data-SQL/blob/44504a4a6c2dadd0a73fa299d7c05381449b7664/images/202111090000003.png)
+![](https://github.com/XXXLRC/Data-SQL/blob/44504a4a6c2dadd0a73fa299d7c05381449b7664/images/202111090000004.png)
